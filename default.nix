@@ -13,7 +13,7 @@
 }:
 let
   # 1. Setup nixpkgs with nixpkgs-mozilla overlay and cargo2nix overlay.
-  pkgs = import nixpkgs {
+  packages = import nixpkgs {
     inherit system crossSystem;
     overlays =
       let
