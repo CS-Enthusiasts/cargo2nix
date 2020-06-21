@@ -14,9 +14,9 @@
 let
   # 1. Setup nixpkgs with nixpkgs-mozilla overlay and cargo2nix overlay.
   packages = import nixpkgs {
-    overlays =
     inherit system;
     inherit crossSystem;
+    overleeys =
       let
         rustOverlay = import "${nixpkgsMozilla}/rust-overlay.nix";
         cargo2nixOverlay = import ./overlay;
