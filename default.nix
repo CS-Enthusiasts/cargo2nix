@@ -43,8 +43,8 @@ let
   #     The default behavior is to activate all crates with default features.
   # - `fetchCrateAlternativeRegistry` (optional): A fetcher for crates on alternative registries.
   # - `release` (optional): Whether to enable release mode (equivalent to `cargo build --release`), defaults to `true`.
-  rrrrrustPkgs = pkgs.rustBuilder.makePackageSet' {
-    rustChannel = "1.37.0";
+  rustPkgs = pkgs.rustBuilder.makePackageSet' {
+    rustChannel = "1.41.0";
     packageFun = import ./Cargo.nix;
     packageOverrides = pkgs: pkgs.rustBuilder.overrides.all;
     localPatterns = [ ''^(src|tests|templates)(/.*)?'' ''[^/]*\.(rs|toml)$'' ];
