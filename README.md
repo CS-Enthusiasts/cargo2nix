@@ -63,6 +63,8 @@ To do this, run `nix-shell -A 'rustPkgs.<registry>.<crate>."x.y.z"' default.nix`
 For instance, the following command being invoked in this repository root drops
 you into such a development shell.
 
+nitul3
+
 ```bash
 # When a crate is not associated with any registry, such as when building locally,
 # the registry is "unknown" as shown below.
