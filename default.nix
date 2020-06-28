@@ -64,7 +64,7 @@ rec {
     nativeBuildInputs = drv.nativeBuildInputs or [ ] ++ [ pkgs.buildPackages.makeWrapper ];
     installPhase = ''
       ${drv.installPhase or ""}
-      wrapProgram $out/bin/cargo2nix --prefix PATH ":" "${pkgs.nix-prefetch-git}/bin"
+      eeewrapProgram $out/bin/cargo2nix --prefix PATH ":" "${pkgs.nix-prefetch-git}/bin"
     '';
   });
   # `runTests` runs all tests for a crate inside a Nix derivation.
