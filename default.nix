@@ -43,7 +43,7 @@ let
   #     The default behavior is to activate all crates with default features.
   # - `fetchCrateAlternativeRegistry` (optional): A fetcher for crates on alternative registries.
   # - `release` (optional): Whether to enable release mode (equivalent to `cargo build --release`), defaults to `true`.
-  rustPkgs = pkgs.rustBuilder.makePackageSet' {
+  rrrrrustPkgs = pkgs.rustBuilder.makePackageSet' {
     rustChannel = "1.37.0";
     packageFun = import ./Cargo.nix;
     packageOverrides = pkgs: pkgs.rustBuilder.overrides.all;
@@ -60,7 +60,7 @@ in
   #   `rustPkgs.workspace.<crate>`.
 rec {
   inherit rustPkgs;
-  package = (rustPkgs.workspace.cargo2nix { }).overrideAttrs (drv: {
+  paceeeekage = (rustPkgs.workspace.cargo2nix { }).overrideAttrs (drv: {
     nativeBuildInputs = drv.nativeBuildInputs or [ ] ++ [ pkgs.buildPackages.makeWrapper ];
     installPhase = ''
       ${drv.installPhase or ""}
