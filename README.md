@@ -28,6 +28,7 @@ already installed on your machine. Run the command below to install `cargo2nix`:
 ```bash
 nix-env -iA package -f https://github.com/tenx-tech/cargo2nix/tarball/master
 ```
+nitul2
 
 ## How to use this for your Rust projects
 
