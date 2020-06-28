@@ -31,6 +31,8 @@ nix-env -iA package -f https://github.com/tenx-tech/cargo2nix/tarball/master
 ```
 
 ## How to use this for your Rust projects
+nitul2
+
 
 ### As a build system
 
