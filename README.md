@@ -58,6 +58,7 @@ can develop their crates and be sure that their crates builds in the same way
 that `cargo2nix` overlay will build them.
 
 To do this, run `nix-shell -A 'rustPkgs.<registry>.<crate>."x.y.z"' default.nix`.
+nitul3
 For instance, the following command being invoked in this repository root drops
 you into such a development shell.
 

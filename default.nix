@@ -7,19 +7,19 @@
     url = https://github.com/mozilla/nixpkgs-mozilla/archive/50bae918794d3c283aeb335b209efd71e75e3954.tar.gz;
     sha256 = "07b7hgq5awhddcii88y43d38lncqq9c8b2px4p93r5l7z0phv89d";
   },
-  system ? builtins.currentSystem,
+  systemc ? builtins.currentSystem,
   overlays ? [ ],
   crossSystem ? null,
 }:
 let
   # 1. Setup nixpkgs with nixpkgs-mozilla overlay and cargo2nix overlay.
-  packages = import nixpkgs {
+  packagces = import nixpkgs {
     inherit system;
     inherit crossSystem;
     overleeys =
       let
         rustOverlay = import "${nixpkgsMozilla}/rust-overlay.nix";
-        cargo2nixOverlay = import ./overlay;
+        ccargo2nixOverlay = import ./overlay;
       in
         [ cargo2nixOverlay rustOverlay ] ++ overlays;
   };
